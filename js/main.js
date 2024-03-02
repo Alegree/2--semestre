@@ -55,23 +55,23 @@ document.getElementById("container3D").appendChild(renderer.domElement);
 camera.position.set(-4, 1, 2)
 
 //Add lights to the scene, so we can actually see the 3D model
-const topLight = new THREE.DirectionalLight(0xffffff, 2); // (color, intensity)
+const topLight = new THREE.DirectionalLight(0xffffff, 1); // (color, intensity)
 topLight.position.set(-2, 3, 1) //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
 
-const rightLight = new THREE.DirectionalLight(0xffffff, 2); // (color, intensity)
+const rightLight = new THREE.DirectionalLight(0xffffff, 1); // (color, intensity)
 rightLight.position.set(2, 0, 4) //top-left-ish
 rightLight.castShadow = true;
 scene.add(rightLight);
 
-const leftLight = new THREE.DirectionalLight(0xffffff, 2); // (color, intensity)
+const leftLight = new THREE.DirectionalLight(0xffffff, 1); // (color, intensity)
 leftLight.position.set(0, -2, 2) //top-left-ish
 leftLight.castShadow = true;
 scene.add(leftLight);
 
 
-const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "dino" ? 8 : 3);
+const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "dino" ? 6 : 3);
 scene.add(ambientLight);
 
 //This adds controls to the camera, so we can rotate / zoom it with the mouse
